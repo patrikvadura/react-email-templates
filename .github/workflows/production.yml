@@ -23,7 +23,7 @@ jobs:
     - name: Export Email Template
       run: npm run export
       env:
-        CDN_URL: ${{ secrets.CDN_URL }}
+        CDN_URL: ${{ vars.CDN_URL }}
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
