@@ -9,7 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      env_var: ${{ secrets.CDN_URL }}
+      CDN_URL: 'https://patrikvadura.github.io/react-email-templates'
 
     steps:
     - uses: actions/checkout@v2
