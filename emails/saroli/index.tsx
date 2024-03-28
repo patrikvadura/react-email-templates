@@ -15,6 +15,7 @@ import {
   Text,
 } from '@react-email/components'
 import * as React from 'react'
+import 'dotenv/config'
 
 export interface Props {
   userName?: string

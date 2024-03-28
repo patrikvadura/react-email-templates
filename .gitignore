@@ -1,5 +1,7 @@
 node_modules
 /node_modules/
+out
+.react-email
 .vscode
 .idea
 Thumbs.db
@@ -7,3 +9,4 @@ Thumbs.db
 npm-debug.log
 yarn-error.log
 package-lock.json
+.env
