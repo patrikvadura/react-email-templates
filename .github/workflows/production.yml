@@ -3,11 +3,13 @@ name: Deploy Email Template to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - master      
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      env_var: ${{ secrets.CDN_URL }}
 
     steps:
     - uses: actions/checkout@v2
@@ -22,8 +24,6 @@ jobs:
 
     - name: Export Email Template
       run: npm run export
-      env:
-        CDN_URL: ${{ vars.CDN_URL }}
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
