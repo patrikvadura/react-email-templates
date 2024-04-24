@@ -53,47 +53,47 @@ export const MarketingEmail = ({
       >
         <Head>
           <Font
-            fontFamily="PP Mori"
-            fallbackFontFamily="Arial"
-            webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-Book.woff2`,
-              format: 'woff2',
-            }}
-            fontWeight={300}
-            fontStyle="normal"
+              fontFamily="PP Telegraf"
+              fallbackFontFamily="Arial"
+              webFont={{
+                url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Ultralight.woff2`,
+                format: 'woff2',
+              }}
+              fontWeight={300}
+              fontStyle="normal"
           />
 
           <Font
-            fontFamily="PP Mori"
-            fallbackFontFamily="Arial"
-            webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-Regular.woff2`,
-              format: 'woff2',
-            }}
-            fontWeight={400}
-            fontStyle="normal"
+              fontFamily="PP Telegraf"
+              fallbackFontFamily="Arial"
+              webFont={{
+                url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Regular.woff2`,
+                format: 'woff2',
+              }}
+              fontWeight={400}
+              fontStyle="normal"
           />
 
           <Font
-            fontFamily="PP Mori"
-            fallbackFontFamily="Arial"
-            webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-SemiBold.woff2`,
-              format: 'woff2',
-            }}
-            fontWeight={600}
-            fontStyle="normal"
+              fontFamily="PP Telegraf"
+              fallbackFontFamily="Arial"
+              webFont={{
+                url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Bold.woff2`,
+                format: 'woff2',
+              }}
+              fontWeight={600}
+              fontStyle="normal"
           />
 
           <Font
-            fontFamily="PP Mori"
-            fallbackFontFamily="Arial"
-            webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-ExtraBold.woff2`,
-              format: 'woff2',
-            }}
-            fontWeight={800}
-            fontStyle="normal"
+              fontFamily="PP Telegraf"
+              fallbackFontFamily="Arial"
+              webFont={{
+                url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Black.woff2`,
+                format: 'woff2',
+              }}
+              fontWeight={800}
+              fontStyle="normal"
           />
         </Head>
         <Body className="bg-brand-primary font-sans">
@@ -109,7 +109,7 @@ export const MarketingEmail = ({
                     Tradičním papírovým vizitkám odzvonilo
                   </Heading>
 
-                  <Heading as="h1" className="text-[50px] text-white">
+                  <Heading as="h1" className="text-[50px] font-[600] text-white">
                     Profesionální osobní <span className="underline">webové vizitky</span>
                   </Heading>
 
@@ -150,7 +150,7 @@ export const MarketingEmail = ({
             <Section className="mt-6">
               <Row>
                 <Column align="center" className="px-8 text-center w-12/12">
-                  <Heading as="h3" className="text-[36px] text-white">
+                  <Heading as="h3" className="text-[36px] font-[600] text-white">
                     Vše připraveno <span className="underline">již v řádu dní</span>
                   </Heading>
                 </Column>
@@ -206,7 +206,7 @@ export const MarketingEmail = ({
             <Section>
               <Row>
                 <Column align="center" className="px-8 pt-8 text-center w-6/12 sm:w-12/12">
-                  <Heading as="h2" className="text-white">
+                  <Heading as="h2" className="font-[600] text-white">
                     Proč si vybrat webové vizitky?
                   </Heading>
                 </Column>
@@ -214,7 +214,7 @@ export const MarketingEmail = ({
 
               <Row>
                 <Column align="center" className="align-top text-center w-6/12 sm:w-12/12">
-                  <Heading as="h4" className="text-white">
+                  <Heading as="h4" className="font-[600] text-white">
                     Moderní a profesionální
                   </Heading>
 
@@ -222,7 +222,7 @@ export const MarketingEmail = ({
                     Vyberte si z široké škály krásných a moderních šablon.
                   </Text>
 
-                  <Heading as="h4" className="text-white">
+                  <Heading as="h4" className="font-[600] text-white">
                     Snadno se sdílí
                   </Heading>
 
@@ -232,7 +232,7 @@ export const MarketingEmail = ({
                 </Column>
 
                 <Column align="center" className="align-top text-center w-6/12 sm:w-12/12">
-                  <Heading as="h4" className="text-white">
+                  <Heading as="h4" className="font-[600] text-white">
                     Dostupné 24/7
                   </Heading>
 
@@ -240,7 +240,7 @@ export const MarketingEmail = ({
                     Vaše webová vizitka je dostupná online 24 hodin denně, 7 dní v týdnu.
                   </Text>
 
-                  <Heading as="h4" className="text-white">
+                  <Heading as="h4" className="font-[600] text-white">
                     Bezpečné a spolehlivé
                   </Heading>
 
@@ -254,7 +254,7 @@ export const MarketingEmail = ({
             <Section className="mt-6" style={{ background: 'rgb(255 255 255 / .05)', }}>
               <Row>
                 <Column align="center" className="px-8 py-4 text-center w-12/12">
-                  <Heading as="h2" className="text-white">
+                  <Heading as="h2" className="font-[600] text-white">
                     Vizitka vám nestačí? Zkuste šablonové webové stránky.
                   </Heading>
 
@@ -294,7 +294,7 @@ export const MarketingEmail = ({
                     <span className="px-1 hidden sm:inline">|</span>
                     <Link
                       href={`https://${infoWebsite}`}
-                      className="text-white font-bold block sm:inline"
+                      className="text-white font-[600] block sm:inline"
                     >
                       {infoWebsite}
                     </Link>

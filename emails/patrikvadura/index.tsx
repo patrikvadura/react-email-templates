@@ -45,8 +45,8 @@ export const SignatureEmail = ({
             extend: {
               colors: {
                 brand: {
-                  primary: '#242E34',
-                  secondary: '#8E907F',
+                  primary: '#04080B',
+                  accent: '#8BEDA4',
                 },
               },
             },
@@ -55,10 +55,10 @@ export const SignatureEmail = ({
       >
         <Head>
           <Font
-            fontFamily="PP Mori"
+            fontFamily="PP Telegraf"
             fallbackFontFamily="Arial"
             webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-Book.woff2`,
+              url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Ultralight.woff2`,
               format: 'woff2',
             }}
             fontWeight={300}
@@ -66,10 +66,10 @@ export const SignatureEmail = ({
           />
 
           <Font
-            fontFamily="PP Mori"
+            fontFamily="PP Telegraf"
             fallbackFontFamily="Arial"
             webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-Regular.woff2`,
+              url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Regular.woff2`,
               format: 'woff2',
             }}
             fontWeight={400}
@@ -77,10 +77,10 @@ export const SignatureEmail = ({
           />
 
           <Font
-            fontFamily="PP Mori"
+            fontFamily="PP Telegraf"
             fallbackFontFamily="Arial"
             webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-SemiBold.woff2`,
+              url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Bold.woff2`,
               format: 'woff2',
             }}
             fontWeight={600}
@@ -88,10 +88,10 @@ export const SignatureEmail = ({
           />
 
           <Font
-            fontFamily="PP Mori"
+            fontFamily="PP Telegraf"
             fallbackFontFamily="Arial"
             webFont={{
-              url: `${baseUrl}/static/patrikvadura/fonts/PPMori-ExtraBold.woff2`,
+              url: `${baseUrl}/static/patrikvadura/fonts/PPTelegraf-Black.woff2`,
               format: 'woff2',
             }}
             fontWeight={800}
@@ -113,10 +113,10 @@ export const SignatureEmail = ({
                 </Column>
 
                 <Column className="w-9/12 sm:w-10/12">
-                  <Img src={logoImage} height="14" alt="Patrik Vaďura" />
+                  <Img src={logoImage} height="16" alt="Patrik Vaďura" />
 
                   <Text className="text-brand-primary text-[13px] leading-[17px] mt-3 mb-0 sm:mb-2">
-                    <span className="font-bold">{userName}</span>
+                    <span className="font-[600]">{userName}</span>
                     <span className="px-1 hidden sm:inline">|</span>
                     <span className="block sm:inline">{userPosition}</span>
                   </Text>
@@ -132,7 +132,7 @@ export const SignatureEmail = ({
                     <span className="px-1 hidden sm:inline">|</span>
                     <Link
                       href={`https://${infoWebsite}`}
-                      className="text-brand-primary font-bold block sm:inline"
+                      className="text-brand-primary font-[600] block sm:inline"
                     >
                       {infoWebsite}
                     </Link>
