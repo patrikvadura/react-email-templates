@@ -1,18 +1,18 @@
 import * as React from 'react'
-import SaroliEmail, { Props } from '../index'
+import SaroliEmail, { Props } from '../default'
 
 const customProps: Partial<Props> = {
-  userName: 'Michal Tyml',
-  userImage: 'profile-tyml.webp',
+  userName: 'Hynek Kůdela',
+  userImage: 'profile-kudela.webp',
   userRole: 'Finanční poradce',
   userCompany: 'Saroli & Partneři s.r.o.',
-  userEmail: 'tyml@saroli.cz',
-  userPhone: '+420 737 404 017',
+  userEmail: 'kudela@saroli.cz',
+  userPhone: '+420 603 471 452',
   userWebsite: 'sarolipartneri.cz',
   logo: 'saroli',
 }
 
-const SaroliEmailCustom: React.FC<Props> = (props) => {
+const SaroliEmailCustom: React.FC<Props> = props => {
   return <SaroliEmail {...customProps} {...props} />
 }
 
