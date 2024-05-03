@@ -79,7 +79,7 @@ export const SignatureEmail = ({
         </Head>
         <Fragment>
           <Body className="bg-white font-sans">
-            <Container className="px-[10px]">
+            <Container className="px-[10px] w-full sm:w-[600px]">
               <Text className="text-brand-primary text-[14px] leading-[20px]">
                 S přáním hezkého dne
               </Text>
@@ -88,14 +88,14 @@ export const SignatureEmail = ({
 
               <Section>
                 <Row>
-                  <Column align="left" className="w-3/12 sm:w-2/12">
-                    <Img className="rounded-full" src={userImage} height="60" />
+                  <Column align="left">
+                    <Img className="rounded-full pr-2 md:pr-0" src={userImage} height="60" />
                   </Column>
 
-                  <Column className="w-9/12 sm:w-10/12">
+                  <Column>
                     <Img src={logoImage} height="16" alt="Patrik Vaďura" />
 
-                    <Text className="text-brand-primary text-[13px] leading-[17px] mt-3 mb-0 sm:mb-1">
+                    <Text className="text-brand-primary text-[13px] leading-[16px] mt-3 mb-0 sm:mb-1">
                       <span className="font-[600]">{userName}</span>
                       <span className="px-1 hidden sm:inline">|</span>
                       <span className="hidden sm:block sm:inline">{userPosition}</span>
