@@ -79,7 +79,7 @@ export const SignatureEmail = ({
 
               <Section>
                 <Row>
-                  <Column align="left">
+                  <Column align="left" className="w-3/12 sm:w-2/12">
                     <Img
                       className="rounded-full pr-2 md:pr-0"
                       src={userImage}
@@ -88,7 +88,7 @@ export const SignatureEmail = ({
                     />
                   </Column>
 
-                  <Column>
+                  <Column align="left" className="w-9/12 md:w-10/12">
                     <Img src={logoImage} height="16" alt={userName} />
 
                     <Text className="text-brand-primary text-[13px] leading-[16px] mt-3 mb-0 sm:mb-1">
@@ -104,13 +104,6 @@ export const SignatureEmail = ({
                       <span className="px-1">|</span>
                       <Link href={`mailto: ${infoEmail};`} className="text-brand-primary">
                         {infoEmail}
-                      </Link>
-                      <span className="px-1 hidden sm:inline">|</span>
-                      <Link
-                        href={`https://${infoWebsite}`}
-                        className="text-brand-primary font-[600] block sm:inline"
-                      >
-                        {infoWebsite}
                       </Link>
                     </Text>
                   </Column>
