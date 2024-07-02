@@ -125,7 +125,7 @@ export const SignatureEmail = ({
                   <Column align="left">
                     <Link
                       href={`https://${infoWebsite}`}
-                      className="text-white text-[13px] leading-[16px] font-[600] block sm:inline"
+                      className="text-white text-[13px] leading-[16px] font-[600] underline block sm:inline"
                     >
                       <Img
                         src={`${baseUrl}/static/medicredit/icons/globe.png`}
@@ -140,7 +140,7 @@ export const SignatureEmail = ({
                   <Column align="left">
                     <Link
                       href={`https://${infoWebsiteEshop}`}
-                      className="text-white text-[13px] leading-[16px] font-[600] block sm:inline"
+                      className="text-white text-[13px] leading-[16px] font-[600] underline block sm:inline"
                     >
                       <Img
                         src={`${baseUrl}/static/medicredit/icons/shoping-cart.png`}
@@ -155,7 +155,7 @@ export const SignatureEmail = ({
                   <Column align="left">
                     <Link
                       href={`https://${infoWebsiteCatalogue}`}
-                      className="text-white text-[13px] leading-[16px] font-[600] block sm:inline"
+                      className="text-white text-[13px] leading-[16px] font-[600] underline block sm:inline"
                     >
                       <Img
                         src={`${baseUrl}/static/medicredit/icons/book.png`}
