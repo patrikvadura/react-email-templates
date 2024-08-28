@@ -17,12 +17,12 @@ import {
 import * as React from 'react'
 
 const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''
-const userImage = `${baseUrl}/static/visiosnap/email_photo/email-photo_jakub_light.png`
+const logoImage = `https://profile-next-core.s3.eu-north-1.amazonaws.com/identity/logo_default.png`
+const userImage = `https://profile-next-core.s3.eu-north-1.amazonaws.com/emailing/email-photo_jakub_light.png`
 const userName = 'Jakub Galia'
-const userPosition = 'CEO & Founder'
 const infoEmail = 'jakub@visiosnap.cz'
 
-export const VercelInviteUserEmail = () => {
+export const VisioSnapOffer = () => {
   return (
     <Html>
       <Tailwind
@@ -49,11 +49,7 @@ export const VercelInviteUserEmail = () => {
             <Container className="bg-white rounded-xl my-[20px] sm:my-[40px] mx-auto px-[20px] sm:px-[40px] py-[40px] max-w-[465px]">
               <Section className="flex justify-center text-center mb-[32px]">
                 <Link href="https://visiosnap.cz">
-                  <Img
-                    src={`https://profile-next-core.s3.eu-north-1.amazonaws.com/identity/logo_default.png`}
-                    width="140"
-                    alt="VisioSnap"
-                  />
+                  <Img src={logoImage} width="140" alt="VisioSnap" />
                 </Link>
               </Section>
 
@@ -66,14 +62,14 @@ export const VercelInviteUserEmail = () => {
                 získáním nových klientů. Zjistil jsem, že v současnosti nemáte vlastní webové
                 stránky, které by vám mohly přinést nové akvizice. Tuto situaci lze rychle a za
                 nízké náklady změnit. Můžu vám{' '}
-                <span className="font-semibold">během 4 pracovních dnů</span> připravit online
+                <span className="font-semibold">již během 3 pracovních dnů</span> připravit online
                 vizitku. Základní verze je dostupná{' '}
                 <span className="font-semibold">již od 4 990 Kč</span>.
               </Text>
 
               <Section className="flex justify-center items-center text-center">
                 <Img
-                  src={`${baseUrl}/static/visiosnap/marketing/marketing_hero_04.png`}
+                  src={`https://profile-next-core.s3.eu-north-1.amazonaws.com/emailing/marketing_hero_04.png`}
                   className="w-[250px] md:w-[500px]"
                 />
               </Section>
@@ -83,20 +79,33 @@ export const VercelInviteUserEmail = () => {
               </Heading>
 
               <Text className="text-center text-black text-[14px] leading-[20px] m-0 p-0">
-                Pokud máte zájem, mohu vám bezplatně vytvořit ukázku. Stačí, když vyplníte dotazník,
-                kde uvedete všechny požadované informace, které chcete na webu mít. Na základě
-                těchto podkladů vám připravím ukázku vašeho webu zdarma. Poté se můžete rozhodnout,
-                zda chcete pokračovat a web dokončit.
+                Pokud máte zájem, můžete si sám a bezplatně vytvořit ukázku. Stačí, když si projdete
+                naším online webovým konfigurátorem, kde uvedete všechny požadované informace,
+                přizpůsobíte si vzhled, doplníte logo a další prvky, které chcete na webu mít. Pokud
+                se vám podoba webu bude líbit, můžete web rovnou v konfigurátoru objednat. Poté se
+                můžete s vámi spojím buď já nebo někdo z kolegů a společně dořeším vše potřebné pro
+                spuštění webu.
               </Text>
 
+              <Section className="flex justify-center items-center text-center mt-4">
+                <Img
+                  src={`https://profile-next-core.s3.eu-north-1.amazonaws.com/emailing/marketing_how_it_works.png`}
+                  className="w-[250px] md:w-[500px]"
+                />
+              </Section>
+
               <Heading className="text-brand-primary text-[16px] font-semibold text-center p-0 my-[26px] mx-0">
-                Balíčky a cena
+                Kolik naše služba stojí?
               </Heading>
 
               <Text className="text-center text-black text-[14px] leading-[20px] m-0 p-0">
-                Služba je rozdělena do 3 balíčků. Pokud vám stačí jednoduchá webová vizika,
-                vystačíte si s balíčkem START. Pokud jste náročnější uživatel a chcete věnovat i
-                více času marketingu, doporučuji balíček PRO.
+                Výsledná cena webu je závislá na několika aspektech, kterými si projdete v průběhu
+                sestavování webu v konfigurátoru. Aktuální cena webu ve stavu v jakém web vidíte se
+                vám vždy v reálném čase zobrazuje přímo v konfigurátoru. Máte tedy cenu vždy pod
+                kontrolou a nemůže vás nic překvapit. <br />
+                <br />
+                Platba je jednorázová. A kromě platby za doménu, která probíhá jednou ročně a není
+                závislá na naší službě vás provoz vašeho webu nebudude nic více stát.
               </Text>
 
               <Section className="flex flex-col md:flex-row justify-center items-center text-center mt-[32px] mb-[32px]">
@@ -116,11 +125,8 @@ export const VercelInviteUserEmail = () => {
               </Section>
 
               <Text className="text-center text-black text-[14px] leading-[20px] m-0 p-0">
-                Platba je jednorázová. Po bezplatné ukázce máte možnost provést sérii úprav. <br />{' '}
-                <br />
                 Máte-li jakékoli otázky, můžeme si o nich promluvit na online schůzce, nebo se
-                podívejte do sekce FAQ. Pokud máte zájem o bezplatnou ukázku, vyplňte prosím
-                dotazník, a během několika dnů vám návrh přijde do emailu.
+                podívejte do sekce FAQ.
               </Text>
 
               <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
@@ -151,10 +157,6 @@ export const VercelInviteUserEmail = () => {
                     visiosnap.cz
                   </Link>{' '}
                   |{' '}
-                  <Link href="https://visiosnap.cz/help" className="text-[#666666]">
-                    Dotazník
-                  </Link>{' '}
-                  |{' '}
                   <Link href="https://visiosnap.cz/#faq" className="text-[#666666]">
                     FAQ
                   </Link>{' '}
@@ -169,7 +171,7 @@ export const VercelInviteUserEmail = () => {
                 Powered by
                 <Link href="https://visiosnap.cz">
                   <Img
-                    src={`${baseUrl}/static/visiosnap/logo_monochrom.png`}
+                    src={`https://profile-next-core.s3.eu-north-1.amazonaws.com/identity/logo_monochrom.png`}
                     width="75"
                     height="17"
                     alt="VisioSnap"
@@ -185,4 +187,4 @@ export const VercelInviteUserEmail = () => {
   )
 }
 
-export default VercelInviteUserEmail
+export default VisioSnapOffer
