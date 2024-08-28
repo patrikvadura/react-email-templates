@@ -17,8 +17,8 @@ import {
 import * as React from 'react'
 
 const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''
-const logoImage = `https://profile-next-core.s3.eu-north-1.amazonaws.com/identity/logo_default.png`
-const userImage = `${baseUrl}/static/visiosnap/email_photo/email-photo_jakub_light.png`
+const logoImage = `https://profile-next-core.s3.eu-north-1.amazonaws.com/identity/logo_monochrom.png`
+const userImage = `https://profile-next-core.s3.eu-north-1.amazonaws.com/emailing/email-photo_jakub_light.png`
 const userName = 'Jakub Galia'
 const infoEmail = 'jakub@visiosnap.cz'
 
@@ -87,7 +87,7 @@ export const VisioSnapSignature = () => {
                       |{' '}
                       <Link href="https://visiosnap.cz">
                         <Img
-                          src={`${baseUrl}/static/visiosnap/logo_monochrom.png`}
+                          src={logoImage}
                           width="75"
                           height="17"
                           alt="VisioSnap"
