@@ -127,12 +127,12 @@ export const ReceiptBasic = () => {
                   visiosnap.cz
                 </Link>{' '}
                 |{' '}
-                <Link href="https://visiosnap.cz/studio" className="text-[#666666]">
-                  Studio
+                <Link href="https://visiosnap.cz/#faq" className="text-[#666666]">
+                  FAQ
                 </Link>{' '}
                 |{' '}
-                <Link href="https://www.visiosnap.cz/#faq" className="text-[#666666]">
-                  FAQ
+                <Link href="https://docs.visiosnap.cz" className="text-[#666666]">
+                  Dokumentace
                 </Link>{' '}
                 |{' '}
                 <Link href="https://www.visiosnap.cz/legal-terms" className="text-[#666666]">

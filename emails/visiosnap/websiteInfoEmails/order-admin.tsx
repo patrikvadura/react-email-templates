@@ -18,7 +18,7 @@ import * as React from 'react'
 
 const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''
 
-export const ReceiptBasic = () => {
+export const OrderAdmin = () => {
   return (
     <Html>
       <Tailwind
@@ -42,34 +42,40 @@ export const ReceiptBasic = () => {
         <Body className="bg-[#F0F1F8] my-auto mx-auto w-full">
           <Container className="bg-white font-sans w-full rounded-xl my-[20px] sm:my-[40px] mx-auto px-[20px] sm:px-[40px] py-[40px]">
             <Heading className="text-brand-primary text-[20px] font-semibold text-center p-0 mb-[30px] mx-0">
-              Upomínka neuhrazené faktury
+              Byla vytvořena nová objednávka webu VisioSnap pro doménu indrafinance.cz
             </Heading>
 
             <Text className="text-center text-black text-[14px] leading-[20px] m-0 p-0">
-              Tímto vás upozorňujeme na neuhrazenou fakturu za vaši webovou stránku. <br />
-              Prosíme o zaplacení faktury za vaši webovou stránku. Faktura je k dispozici ke stažení
-              na odkazu níže.
+              Byla vytvořena nová objednávka s následujícími údaji:
             </Text>
 
-            <Heading className="text-black text-[14px] font-semibold text-center p-0 my-[24px] mx-0">
-              Co se stane když fakturu nezaplatíte?
-            </Heading>
+            <Section className="text-center mt-[32px] mb-[32px]">
+              <ul className="m-0 px-0 text-center">
+                <li className="list-none text-[14px] leading-[20px] pb-2">
+                  <b className="block">Doména a volba DNS:</b>{' '}
+                  <Link
+                    href="https://visiosnap.cz/websites/indrafinance.cz"
+                    className="text-brand-primary font-semibold"
+                  >
+                    indrafinance.cz
+                  </Link>{' '}
+                  | Zkoupení domény
+                </li>
 
-            <Text className="text-center text-black text-[14px] leading-[20px] m-0 p-0">
-              Pokud fakturu nezaplatíte do 7 dní od obdržení této upomínky, vaše webová stránka bude
-              dočasně pozastavena a nebude dostupná.
-            </Text>
+                <li className="list-none text-[14px] leading-[20px] pb-2">
+                  <b className="block">Cena a termín:</b> 3 500 Kč | 3 dny
+                </li>
+
+                <li className="list-none text-[14px] leading-[20px]">
+                  <b className="block">Klient:</b> Patrik Indra | 123 456 789 |
+                  indra@indrafinance.cz
+                </li>
+              </ul>
+            </Section>
 
             <Section className="text-center mt-[32px] mb-[32px]">
               <Button
                 className="bg-brand-primary rounded-full text-white text-[12px] font-bold no-underline text-center px-5 py-3 mr-2"
-                href="https://visiosnap.cz"
-              >
-                Zobrazit fakturu
-              </Button>
-
-              <Button
-                className="bg-[#F2F2F2] rounded-full text-brand-primary text-[12px] font-bold no-underline text-center px-5 py-3"
                 href="https://visiosnap.cz"
               >
                 Náhled webu
@@ -126,4 +132,4 @@ export const ReceiptBasic = () => {
   )
 }
 
-export default ReceiptBasic
+export default OrderAdmin
