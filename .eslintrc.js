@@ -3,4 +3,10 @@ module.exports = {
   extends: [],
   ignorePatterns: [],
   plugins: ['prettier'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  env: {
+    es6: true,
+  },
 }
