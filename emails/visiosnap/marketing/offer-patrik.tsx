@@ -45,7 +45,7 @@ export const VisioSnapOffer = () => {
       >
         <Head />
         <Body className="bg-[#F0F1F8] my-auto mx-auto w-full">
-          <Container className="bg-white font-sans rounded-xl my-[20px] sm:my-[40px] mx-auto px-[20px] sm:px-[40px] py-[40px]">
+          <Container className="bg-white font-sans rounded-xl my-[20px] sm:my-[40px] mx-auto px-[20px] sm:px-[40px] py-[40px] sm:w-[600px]">
             <Section className="flex justify-center text-center mb-[32px]">
               <Link href="https://visiosnap.cz">
                 <Img src={logoImage} width="140" alt="VisioSnap" />
@@ -57,7 +57,7 @@ export const VisioSnapOffer = () => {
             </Heading>
 
             <Text className="text-center text-black text-[14px] leading-[20px] mb-3 p-0">
-              jmenuji se Jakub a rád bych vám nabídl pomoc se zvýšením vaší viditelnosti a získáním
+              jmenuji se Patrik a rád bych vám nabídl pomoc se zvýšením vaší viditelnosti a získáním
               nových klientů. Zjistil jsem, že v současnosti nemáte vlastní webové stránky, které by
               vám mohly přinést nové akvizice. Tuto situaci lze rychle a za nízké náklady změnit.
               Můžu vám <span className="font-semibold">již během 3 pracovních dnů</span> připravit
@@ -80,9 +80,9 @@ export const VisioSnapOffer = () => {
               Pokud máte zájem, můžete si sám a bezplatně vytvořit ukázku. Stačí, když si projdete
               naším online webovým konfigurátorem, kde uvedete všechny požadované informace,
               přizpůsobíte si vzhled, doplníte logo a další prvky, které chcete na webu mít. Pokud
-              se vám podoba webu bude líbit, můžete web rovnou v konfigurátoru objednat. Poté se
-              můžete s vámi spojím buď já nebo někdo z kolegů a společně dořeším vše potřebné pro
-              spuštění webu.
+              se vám podoba webu bude líbit, můžete web rovnou v konfigurátoru objednat. Poté se s
+              vámi spojím buď já nebo někdo z kolegů a společně dořešíme vše potřebné pro spuštění
+              webu.
             </Text>
 
             <Section className="flex justify-center items-center text-center mt-4">
