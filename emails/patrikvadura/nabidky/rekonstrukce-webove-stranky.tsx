@@ -112,19 +112,6 @@ export const MarketingEmail = ({
                       Pár dní se už na ně zaměřuji a přemítám nad jejich možnostmi a kvalitami.
                       Vidím tam velký prostor pro zlepšení a zároveň velký potenciál.
                     </Text>
-
-                    <Button
-                      href="https://patrikvadura.cz/webove-vizitky"
-                      className="text-brand-primary underline py-2"
-                    >
-                      <Img
-                        src={`${baseUrl}/static/patrikvadura/icon_arrow_circle_light.webp`}
-                        width={30}
-                        className="inline align-middle mr-2"
-                        alt="Patrik Vaďura"
-                      />
-                      <span className="underline">Stáhnout kompletní nabídku</span>
-                    </Button>
                   </Column>
                 </Row>
               </Section>
@@ -146,6 +133,10 @@ export const MarketingEmail = ({
                       optimalizace respozivity (kvality zobrazení na mobilních zařízeních). Co
                       přesně jsem na vašem webu vypozoroval a co by si dle mého názoru zasloužilo
                       zlepšení, a proč tomu tak je, jsem vypsal do přehledného souboru s nabídkou.
+                    </Text>
+
+                    <Text className="text-brand-primary text-[14px] leading-[22px] opacity-70">
+                      Kompletní nabídku naleznete v příloze tohoto emailu.
                     </Text>
                   </Column>
                 </Row>
@@ -177,12 +168,6 @@ export const MarketingEmail = ({
                       href="https://patrikvadura.cz/5-duvodu-proc-redesignovat-web/"
                       className="text-brand-primary underline py-2"
                     >
-                      <Img
-                        src={`${baseUrl}/static/patrikvadura/icon_arrow_circle_light.webp`}
-                        width={30}
-                        className="inline align-middle mr-2"
-                        alt="Patrik Vaďura"
-                      />
                       <span className="underline">Přečtěte si můj článek</span>
                     </Button>
                   </Column>
