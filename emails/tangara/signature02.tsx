@@ -27,10 +27,10 @@ interface EmailProps {
 }
 
 export const SignatureEmail = ({
-  userName = 'Ing. Marcel Jachník, MBA, LL.M.',
+  userName = 'TýmTangara.cz',
   logoImage = `https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/logo_default_RGB.png`,
   userPosition = 'jednatel',
-  infoPhone = '+420 775 870 510',
+  infoPhone = '+420 771 509 412',
   infoEmail = 'info@tangara.cz',
   infoWebsite = 'www.tangara.cz',
   infoAddressFirst = 'Fakturační adresa: Osvobození 1672, 686 04 Kunovice',
@@ -83,10 +83,6 @@ export const SignatureEmail = ({
 
                 <Text style={{ ...text, marginBottom: 0 }}>
                   <span style={{ color: '#008BCE', fontWeight: 800 }}>{userName}</span>
-                  <span style={divider} className="hidden sm:inline">
-                    |
-                  </span>
-                  <span className="block sm:inline">{userPosition}</span>
                 </Text>
 
                 <Text style={{ ...text, marginTop: '2px', marginBottom: '2px' }}>
@@ -98,7 +94,15 @@ export const SignatureEmail = ({
                 </Text>
 
                 <Text style={{ ...text, marginTop: '2px', marginBottom: '2px' }}>
-                  <span>{infoPhone}</span>
+                  <span>
+                    <Img
+                      alt="Telefon"
+                      width="18"
+                      src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_phone_02.png"
+                      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}
+                    />
+                    {infoPhone}
+                  </span>
 
                   <span style={divider} className="hidden sm:inline">
                     |
@@ -108,6 +112,12 @@ export const SignatureEmail = ({
                     style={{ ...text, ...anchor }}
                     className="block sm:inline"
                   >
+                    <Img
+                      alt="Email"
+                      width="18"
+                      src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_email_02.png"
+                      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}
+                    />
                     {infoEmail}
                   </Link>
                   <span style={divider} className="hidden sm:inline">
@@ -118,6 +128,12 @@ export const SignatureEmail = ({
                     style={{ ...text, ...anchor }}
                     className="block sm:inline"
                   >
+                    <Img
+                      alt="Webové stránky"
+                      width="18"
+                      src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_website_02.png"
+                      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}
+                    />
                     {infoWebsite}
                   </Link>
                 </Text>

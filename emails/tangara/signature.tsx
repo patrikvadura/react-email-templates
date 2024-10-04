@@ -1,5 +1,6 @@
 import {
   Body,
+  Column,
   Container,
   Font,
   Head,
@@ -7,6 +8,7 @@ import {
   Html,
   Img,
   Link,
+  Row,
   Section,
   Tailwind,
   Text,
@@ -56,91 +58,210 @@ export const SignatureEmail = ({
         <Fragment>
           <Body style={main}>
             <Container style={container}>
-              <Section>
-                <Text style={text}>Dobrý den,</Text>
+              <Section
+                style={{
+                  marginTop: 0,
+                  marginBottom: 0,
+                  paddingTop: 0,
+                  paddingBottom: 4,
+                }}
+              >
+                <Text style={{ ...text, color: '#000000' }}>Dobrý den,</Text>
 
-                <Text style={text}>
+                <Text style={{ ...text, color: '#000000' }}>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis
                   velit. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Maecenas
                   fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra
                   metus odio a lectus.
                 </Text>
-
-                <Text style={text}>S pozdravem</Text>
               </Section>
 
-              <Hr
+              <Section
                 style={{
-                  marginTop: 16,
-                  borderColor: 'rgb(209,213,219)',
-                  marginBottom: 16,
-                  borderTopWidth: 1,
+                  marginTop: 0,
+                  marginBottom: 0,
+                  paddingTop: 0,
+                  paddingBottom: 16,
                 }}
-              />
+              >
+                <Text style={{ ...text, color: '#000000' }}>S pozdravem</Text>
+              </Section>
 
-              <Section style={{ paddingTop: '16px' }}>
-                <Img src={logoImage} height="28" alt="Tangara" />
-
-                <Text style={{ ...text, marginBottom: 0 }}>
-                  <span style={{ color: '#008BCE', fontWeight: 800 }}>{userName}</span>
-                  <span style={divider} className="hidden sm:inline">
-                    |
-                  </span>
-                  <span className="block sm:inline">{userPosition}</span>
-                </Text>
-
-                <Text style={{ ...text, marginTop: '2px', marginBottom: '2px' }}>
-                  {infoAddressFirst}
-                </Text>
-
-                <Text style={{ ...text, marginTop: '2px', marginBottom: '2px' }}>
-                  {infoAddressSecond}
-                </Text>
-
-                <Text style={{ ...text, marginTop: '2px', marginBottom: '2px' }}>
-                  <span>
+              <Section
+                style={{
+                  paddingTop: 24,
+                  borderTop: '1px solid rgb(209,213,219)',
+                }}
+              >
+                <Row>
+                  <Column align="left">
                     <Img
-                      alt="Telefon"
-                      width="18"
-                      src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_phone_02.png"
-                      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}
+                      src={logoImage}
+                      width={130}
+                      height={28}
+                      className="mx-0 px-0"
+                      alt="Tangara"
                     />
-                    {infoPhone}
-                  </span>
+                  </Column>
+                </Row>
 
-                  <span style={divider} className="hidden sm:inline">
-                    |
-                  </span>
-                  <Link
-                    href={`mailto: ${infoEmail};`}
-                    style={{ ...text, ...anchor }}
-                    className="block sm:inline"
+                <Section
+                  style={{
+                    marginTop: 0,
+                    marginBottom: 0,
+                    paddingTop: 12,
+                    paddingBottom: 0,
+                  }}
+                >
+                  <Text
+                    style={{
+                      ...text,
+                      color: '#008BCE !important',
+                      fontWeight: 800,
+                      marginTop: 0,
+                      marginBottom: 0,
+                      paddingTop: 0,
+                      paddingBottom: 2,
+                    }}
                   >
-                    <Img
-                      alt="Email"
-                      width="18"
-                      src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_email_02.png"
-                      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}
-                    />
-                    {infoEmail}
-                  </Link>
-                  <span style={divider} className="hidden sm:inline">
-                    |
-                  </span>
-                  <Link
-                    href={`https://${infoWebsite}`}
-                    style={{ ...text, ...anchor }}
-                    className="block sm:inline"
+                    {userName}
+                  </Text>
+
+                  <Text
+                    style={{
+                      ...text,
+                      color: '#000000',
+                      marginTop: 0,
+                      marginBottom: 0,
+                      paddingTop: 0,
+                      paddingBottom: 0,
+                    }}
                   >
-                    <Img
-                      alt="Webové stránky"
-                      width="18"
-                      src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_website_02.png"
-                      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}
-                    />
-                    {infoWebsite}
-                  </Link>
-                </Text>
+                    {userPosition}
+                  </Text>
+                </Section>
+
+                <Section
+                  style={{
+                    marginTop: 0,
+                    marginBottom: 0,
+                    paddingTop: 12,
+                    paddingBottom: 0,
+                  }}
+                >
+                  <Text
+                    style={{
+                      ...text,
+                      color: '#000000',
+                      marginTop: 0,
+                      marginBottom: 0,
+                      paddingTop: 2,
+                      paddingBottom: 0,
+                    }}
+                  >
+                    {infoAddressFirst}
+                  </Text>
+
+                  <Text
+                    style={{
+                      ...text,
+                      color: '#000000',
+                      marginTop: 0,
+                      marginBottom: 0,
+                      paddingTop: 2,
+                      paddingBottom: 0,
+                    }}
+                  >
+                    {infoAddressSecond}
+                  </Text>
+                </Section>
+
+                <Section
+                  style={{
+                    ...text,
+                    marginTop: 0,
+                    marginBottom: 0,
+                    paddingTop: 8,
+                    paddingBottom: 0,
+                  }}
+                >
+                  <Row>
+                    <Column align="left" className="w-1/3">
+                      <Row>
+                        <Column align="left" className="w-1/5">
+                          <Img
+                            alt="Telefon"
+                            width="18"
+                            height="18"
+                            src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_phone_02.png"
+                            style={{
+                              display: 'inline',
+                              verticalAlign: 'middle',
+                              marginRight: '8px',
+                            }}
+                          />
+                        </Column>
+                        <Column align="left" className="w-4/5">
+                          <span style={{ ...text, color: '#000000' }}>{infoPhone}</span>
+                        </Column>
+                      </Row>
+                    </Column>
+
+                    <Column align="left" className="w-1/3">
+                      <Row>
+                        <Column align="left" className="w-1/5">
+                          <Img
+                            alt="Email"
+                            width="18"
+                            height="14"
+                            src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_email_02.png"
+                            style={{
+                              display: 'inline',
+                              verticalAlign: 'middle',
+                              marginRight: '8px',
+                            }}
+                          />
+                        </Column>
+                        <Column align="left" className="w-4/5">
+                          <Link
+                            href={`mailto: ${infoEmail};`}
+                            style={{ ...text, ...anchor }}
+                            className="block sm:inline"
+                          >
+                            {infoEmail}
+                          </Link>
+                        </Column>
+                      </Row>
+                    </Column>
+
+                    <Column align="left" className="w-1/3">
+                      <Row>
+                        <Column align="left" className="w-1/5">
+                          <Img
+                            alt="Webové stránky"
+                            width="18"
+                            height="18"
+                            src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_website_02.png"
+                            style={{
+                              display: 'inline',
+                              verticalAlign: 'middle',
+                              marginRight: '8px',
+                            }}
+                          />
+                        </Column>
+                        <Column align="left" className="w-4/5">
+                          <Link
+                            href={`https://${infoWebsite}`}
+                            style={{ ...text, ...anchor }}
+                            className="block sm:inline"
+                          >
+                            {infoWebsite}
+                          </Link>
+                        </Column>
+                      </Row>
+                    </Column>
+                  </Row>
+                </Section>
               </Section>
             </Container>
           </Body>
@@ -167,17 +288,11 @@ const text = {
   fontSize: '14px',
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-  color: '#000000',
   lineHeight: '20px',
 }
 
-const divider = {
-  marginLeft: 6,
-  marginRight: 6,
-}
-
 const anchor = {
-  color: '#008BCE',
+  color: '#008BCE !important',
   fontWeight: 800,
-  textDecoration: 'none',
+  textDecoration: 'none !important',
 }
