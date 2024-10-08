@@ -27,7 +27,7 @@ interface EmailProps {
 }
 
 export const SignatureEmail = ({
-  userName = 'TýmTangara.cz',
+  userName = 'Tým Tangara',
   logoImage = `https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/logo_default_RGB.png`,
   userPosition = 'jednatel',
   infoPhone = '+420 771 509 412',
@@ -53,8 +53,18 @@ export const SignatureEmail = ({
         }}
       >
         <Head></Head>
-        <Fragment>
-          <Body style={main}>
+        <Body style={{ margin: 0 }}>
+          <Container
+            style={{
+              backgroundColor: '#f6f9fc',
+              width: '100%',
+              maxWidth: 'none',
+              height: '100%',
+              maxHeight: 'none',
+              padding: '20px 0',
+              margin: 0,
+            }}
+          >
             <Container style={container}>
               <Section
                 style={{
@@ -105,6 +115,7 @@ export const SignatureEmail = ({
                     style={{
                       ...text,
                       color: '#008BCE !important',
+                      textDecoration: 'none !important',
                       fontWeight: 800,
                       marginTop: 0,
                       marginBottom: 0,
@@ -142,15 +153,19 @@ export const SignatureEmail = ({
                   }}
                 >
                   <Text style={text}>
-                    <span style={{ ...text, lineHeight: '16px !important' }} className="!my-0">
+                    <Link
+                      href={`tel: ${infoPhone};`}
+                      style={{ ...text, ...anchor, lineHeight: '16px !important' }}
+                      className="block sm:inline !my-0"
+                    >
                       <Img
                         alt="Telefon"
                         height="20"
-                        src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_02.png"
+                        src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_02-01.png"
                         style={{ display: 'inline', verticalAlign: 'middle' }}
                       />
-                      {' ' + infoPhone}
-                    </span>
+                      {infoPhone}
+                    </Link>
 
                     <span
                       style={{ ...divider, paddingLeft: '4px', paddingRight: '4px' }}
@@ -167,7 +182,7 @@ export const SignatureEmail = ({
                       <Img
                         alt="Email"
                         height="20"
-                        src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_01.png"
+                        src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_01-01.png"
                         style={{ display: 'inline', verticalAlign: 'middle' }}
                       />
                       {infoEmail}
@@ -187,7 +202,7 @@ export const SignatureEmail = ({
                       <Img
                         alt="Webové stránky"
                         height="20"
-                        src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_03.png"
+                        src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_03-01.png"
                         style={{ display: 'inline', verticalAlign: 'middle' }}
                       />
                       {infoWebsite}
@@ -196,19 +211,14 @@ export const SignatureEmail = ({
                 </Section>
               </Section>
             </Container>
-          </Body>
-        </Fragment>
+          </Container>
+        </Body>
       </Tailwind>
     </Html>
   )
 }
 
 export default SignatureEmail
-
-const main = {
-  backgroundColor: '#f6f9fc',
-  padding: '10px 0',
-}
 
 const container = {
   backgroundColor: '#ffffff',
@@ -232,5 +242,5 @@ const divider = {
 const anchor = {
   color: '#008BCE',
   fontWeight: 800,
-  textDecoration: 'none',
+  textDecoration: 'none !important',
 }
