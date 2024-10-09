@@ -29,10 +29,10 @@ interface EmailProps {
 }
 
 export const SignatureEmail = ({
-  userName = 'Ing. Marcel Jachník, MBA, LL.M.',
+  userName = 'Tým Tangara',
   logoImage = `https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/logo_default_RGB.png`,
   userPosition = 'jednatel',
-  infoPhone = '+420 775 870 510',
+  infoPhone = '+420 771 509 412',
   infoEmail = 'info@tangara.cz',
   infoWebsite = 'www.tangara.cz',
   infoAddressFirst = 'Fakturační adresa: Osvobození 1672, 686 04 Kunovice',
@@ -163,66 +163,65 @@ export const SignatureEmail = ({
                   style={{
                     marginTop: 0,
                     marginBottom: 0,
-                    paddingTop: 4,
+                    paddingTop: 16,
                     paddingBottom: 0,
                   }}
                 >
-                  <Text style={text}>
-                    <Link
-                      href={`tel: ${infoPhone};`}
-                      style={{ ...text, ...anchor, lineHeight: '16px !important' }}
-                      className="block sm:inline !my-0"
-                    >
+                  <Row>
+                    <Column>
                       <Img
                         alt="Telefon"
                         height="20"
                         src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_02-01.png"
                         style={{ display: 'inline', verticalAlign: 'middle' }}
                       />
-                      {infoPhone}
-                    </Link>
+                    </Column>
+                    <Column>
+                      <Link
+                        href={`tel: ${infoPhone};`}
+                        style={{ ...text, ...anchor, lineHeight: '16px !important' }}
+                        className="block sm:inline !my-0"
+                      >
+                        {infoPhone}
+                      </Link>
+                    </Column>
 
-                    <span
-                      style={{ ...divider, paddingLeft: '4px', paddingRight: '4px' }}
-                      className="hidden sm:inline"
-                    >
-                      {' '}
-                      |{' '}
-                    </span>
-                    <Link
-                      href={`mailto: ${infoEmail};`}
-                      style={{ ...text, ...anchor, lineHeight: '16px !important' }}
-                      className="block sm:inline !my-0"
-                    >
+                    <Column>
                       <Img
                         alt="Email"
                         height="20"
                         src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_01-01.png"
                         style={{ display: 'inline', verticalAlign: 'middle' }}
                       />
-                      {infoEmail}
-                    </Link>
-                    <span
-                      style={{ ...divider, paddingLeft: '4px', paddingRight: '4px' }}
-                      className="hidden sm:inline"
-                    >
-                      {' '}
-                      |{' '}
-                    </span>
-                    <Link
-                      href={`https://${infoWebsite}`}
-                      style={{ ...text, ...anchor, lineHeight: '16px !important' }}
-                      className="block sm:inline !my-0"
-                    >
+                    </Column>
+                    <Column>
+                      <Link
+                        href={`mailto: ${infoEmail};`}
+                        style={{ ...text, ...anchor, lineHeight: '16px !important' }}
+                        className="block sm:inline !my-0"
+                      >
+                        {infoEmail}
+                      </Link>
+                    </Column>
+
+                    <Column>
                       <Img
                         alt="Webové stránky"
                         height="20"
                         src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_03-01.png"
                         style={{ display: 'inline', verticalAlign: 'middle' }}
                       />
-                      {infoWebsite}
-                    </Link>
-                  </Text>
+                    </Column>
+                    <Column>
+                      <Link
+                        href={`https://${infoWebsite}`}
+                        style={{ ...text, ...anchor, lineHeight: '16px !important' }}
+                        className="block sm:inline !my-0"
+                      >
+                        {infoWebsite}
+                      </Link>
+                    </Column>
+                  </Row>
                 </Section>
               </Section>
             </Container>
@@ -247,11 +246,6 @@ const text = {
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   color: '#000000',
   lineHeight: '20px',
-}
-
-const divider = {
-  marginLeft: 6,
-  marginRight: 6,
 }
 
 const anchor = {
