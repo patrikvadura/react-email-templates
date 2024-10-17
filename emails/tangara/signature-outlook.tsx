@@ -73,24 +73,6 @@ export const SignatureEmail = ({
                   marginTop: 0,
                   marginBottom: 0,
                   paddingTop: 0,
-                  paddingBottom: 4,
-                }}
-              >
-                <Text style={{ ...text, color: '#000000' }}>Dobrý den,</Text>
-
-                <Text style={{ ...text, color: '#000000' }}>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis
-                  velit. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Maecenas
-                  fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra
-                  metus odio a lectus.
-                </Text>
-              </Section>
-
-              <Section
-                style={{
-                  marginTop: 0,
-                  marginBottom: 0,
-                  paddingTop: 0,
                   paddingBottom: 16,
                 }}
               >
