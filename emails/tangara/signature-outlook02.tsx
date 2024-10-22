@@ -147,7 +147,7 @@ export const SignatureEmail = ({
                     </Column>
                     <Column>
                       <Link
-                        href={`tel: ${infoPhone};`}
+                        href={`tel: ${infoPhone}`}
                         style={{ ...text, ...anchor, lineHeight: '16px !important' }}
                         className="block sm:inline !my-0"
                       >
@@ -165,7 +165,7 @@ export const SignatureEmail = ({
                     </Column>
                     <Column>
                       <Link
-                        href={`mailto: ${infoEmail};`}
+                        href={`mailto: ${infoEmail}`}
                         style={{ ...text, ...anchor, lineHeight: '16px !important' }}
                         className="block sm:inline !my-0"
                       >

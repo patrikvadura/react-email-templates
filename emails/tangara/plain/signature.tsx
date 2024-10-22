@@ -37,10 +37,21 @@ export const SignatureEmail = ({
   infoWebsite = 'www.tangara.cz',
   infoAddressFirst = 'Fakturační adresa: Osvobození 1672, 686 04 Kunovice',
   infoAddressSecond = 'Dodací adresa a provozovna: Nádražní 282, 763 26 Luhačovice',
-}: EmailProps) => {
+}: {
+  userName?: string
+  userPosition?: string
+  userImage?: string
+  infoPhone?: string
+  infoEmail?: string
+  infoWebsite?: string
+  logoImage?: string
+  infoAddressFirst?: string
+  infoAddressSecond?: string
+}) => {
   return (
     <Html>
       <Tailwind
+        // @ts-ignore
         config={{
           theme: {
             extend: {
@@ -129,7 +140,7 @@ export const SignatureEmail = ({
             >
               <Text style={text}>
                 <Link
-                  href={`tel: ${infoPhone};`}
+                  href={`tel: ${infoPhone}`}
                   style={{ ...text, ...anchor, lineHeight: '16px !important' }}
                   className="block sm:inline !my-0"
                 >
@@ -150,7 +161,7 @@ export const SignatureEmail = ({
                   |{' '}
                 </span>
                 <Link
-                  href={`mailto: ${infoEmail};`}
+                  href={`mailto: ${infoEmail}`}
                   style={{ ...text, ...anchor, lineHeight: '16px !important' }}
                   className="block sm:inline !my-0"
                 >
