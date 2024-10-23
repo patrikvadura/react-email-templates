@@ -8,6 +8,7 @@ import {
   Text,
   Heading,
   Button,
+  Img,
 } from '@react-email/components'
 
 interface EmailTemplateProps {
@@ -35,8 +36,24 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
     <Head />
     <Body>
       <Container style={container}>
-        <Section>
-          <Heading style={heading}>Máte novou nezávaznou poptávku z webu</Heading>
+        <Section style={{ paddingBottom: 24, textAlign: 'center' }}>
+          <Img
+            alt="Patrik Vaďura"
+            width="65"
+            src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/odhadyzlin/logo_default_RGB.png"
+            style={{
+              width: '180px',
+              display: 'inline',
+              outline: 'none',
+              border: 'none',
+              textDecoration: 'none',
+              paddingLeft: '0.25rem',
+              transform: 'translateY(2px)',
+            }}
+          />
+        </Section>
+        <Section style={{ paddingBottom: 24, textAlign: 'center' }}>
+          <Heading style={heading}>Máte novou nezávaznou poptávku</Heading>
 
           <Heading style={subHeading}>Kontaktní informace</Heading>
           <Text style={text}>
@@ -55,8 +72,8 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
           <Text style={text}>{message}</Text>
         </Section>
 
-        <Section style={{ paddingTop: 16 }}>
-          <Button href="https://example.com" style={button}>
+        <Section style={{ paddingTop: 12, textAlign: 'center' }}>
+          <Button href={`mailto: ${email}`} style={button}>
             Odpovědět klientovi
           </Button>
         </Section>
@@ -79,8 +96,7 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
 
           <Text style={text}>
             Powered by
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Img
               alt="Patrik Vaďura"
               width="65"
               src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing/logo_monochrom.png"
@@ -93,6 +109,7 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
                 textDecoration: 'none',
                 paddingLeft: '0.25rem',
                 transform: 'translateY(2px)',
+                opacity: 0.75,
               }}
             />
           </Text>
