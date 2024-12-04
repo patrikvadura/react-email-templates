@@ -20,7 +20,7 @@ import 'dotenv/config'
 interface EmailProps {
   userName?: string
   userPosition?: string
-  userImage?: string
+  logoImageNegative?: string
   infoPhone?: string
   infoEmail?: string
   infoWebsite?: string
@@ -32,7 +32,7 @@ const baseUrl = process.env.CDN_URL ? `${process.env.CDN_URL}` : ''
 export const SignatureEmail = ({
   userName = 'Patrik Vaďura',
   logoImage = `${baseUrl}/static/patrikvadura/logo.png`,
-  userImage = `${baseUrl}/static/patrikvadura/user.png`,
+  logoImageNegative = `${baseUrl}/static/patrikvadura/logo_negative.png`,
   userPosition = 'Kreativec a webový vývojář',
   infoPhone = '725 007 655',
   infoEmail = 'info@patrikvadura.cz',
@@ -78,36 +78,48 @@ export const SignatureEmail = ({
           />
         </Head>
         <Fragment>
-          <Body className="bg-white font-sans">
+          <Body className="bg-transparent font-sans">
             <Container className="w-full sm:w-[600px]">
-              <Text className="text-brand-primary text-[14px] leading-[20px]">
+              <Text className="text-brand-primary dark:text-white text-[14px] leading-[20px]">
                 S přáním hezkého dne
               </Text>
 
-              <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
+              <Hr className="border border-solid border-[#eaeaea]  my-[26px] mx-0 w-full" />
 
               <Section>
                 <Row>
                   <Column>
-                    <Img src={logoImage} height="16" alt="Patrik Vaďura" />
+                    <Img src={logoImage} height="16" alt="Patrik Vaďura" className="dark:hidden" />
+                    <Img
+                      src={logoImageNegative}
+                      height="16"
+                      alt="Patrik Vaďura"
+                      className="hidden dark:block"
+                    />
 
-                    <Text className="text-brand-primary text-[13px] leading-[16px] mt-3 mb-0 sm:mb-1">
+                    <Text className="text-brand-primary dark:text-white text-[13px] leading-[16px] mt-3 mb-0 sm:mb-1">
                       <span className="font-[600]">{userName}</span>
                       <span className="px-1">| {userPosition}</span>
                     </Text>
 
-                    <Text className="text-brand-primary text-[13px] leading-[17px] mt-0 mb-0">
-                      <Link href={`tel: ${infoPhone};`} className="text-brand-primary">
+                    <Text className="text-brand-primary dark:text-white text-[13px] leading-[17px] mt-0 mb-0">
+                      <Link
+                        href={`tel: ${infoPhone};`}
+                        className="text-brand-primary dark:text-white"
+                      >
                         {infoPhone}
                       </Link>
                       <span className="px-1">|</span>
-                      <Link href={`mailto: ${infoEmail};`} className="text-brand-primary">
+                      <Link
+                        href={`mailto: ${infoEmail};`}
+                        className="text-brand-primary dark:text-white"
+                      >
                         {infoEmail}
                       </Link>
                       <span className="px-1">|</span>
                       <Link
                         href={`https://${infoWebsite}`}
-                        className="text-brand-primary font-[600]"
+                        className="text-brand-primary dark:text-white font-[600]"
                       >
                         {infoWebsite}
                       </Link>
