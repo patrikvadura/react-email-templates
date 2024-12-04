@@ -78,8 +78,8 @@ export const SignatureEmail = ({
           />
         </Head>
         <Fragment>
-          <Body className="bg-transparent font-sans">
-            <Container className="w-full sm:w-[600px]">
+          <Body className="bg-white dark:bg-transparent font-sans">
+            <Container className="p-2 w-full sm:w-[600px]">
               <Text className="text-brand-primary dark:text-white text-[14px] leading-[20px]">
                 S přáním hezkého dne
               </Text>
