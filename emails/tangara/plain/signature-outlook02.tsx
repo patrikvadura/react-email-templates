@@ -30,7 +30,7 @@ interface EmailProps {
 
 export const SignatureEmail = ({
   userName = 'Tým Tangara',
-  logoImage = `https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/logo_default_RGB.png`,
+  logoImage = `https://res.cloudinary.com/patrik-vadura/image/upload/v1741597301/tangara/logo_default_RGB_dzwaxd.png`,
   infoPhone = '+420 771 509 412',
   infoEmail = 'info@tangara.cz',
   infoWebsite = 'www.tangara.cz',
@@ -120,7 +120,7 @@ export const SignatureEmail = ({
                   <Img
                     alt="Telefon"
                     height="20"
-                    src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_02-01.png"
+                    src="https://res.cloudinary.com/patrik-vadura/image/upload/v1741597965/tangara/icon_phone_01_w7mg5m.png"
                     style={{ display: 'inline', verticalAlign: 'middle' }}
                   />
                 </Column>
@@ -138,7 +138,7 @@ export const SignatureEmail = ({
                   <Img
                     alt="Email"
                     height="20"
-                    src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_01-01.png"
+                    src="https://res.cloudinary.com/patrik-vadura/image/upload/v1741597964/tangara/icon_email_01_mqfbgk.png"
                     style={{ display: 'inline', verticalAlign: 'middle' }}
                   />
                 </Column>
@@ -156,7 +156,7 @@ export const SignatureEmail = ({
                   <Img
                     alt="Webové stránky"
                     height="20"
-                    src="https://patrikvadura.s3.eu-north-1.amazonaws.com/emailing-clients/tangara/icon_padding_03-01.png"
+                    src="https://res.cloudinary.com/patrik-vadura/image/upload/v1741597967/tangara/icon_website_01_a7txte.png"
                     style={{ display: 'inline', verticalAlign: 'middle' }}
                   />
                 </Column>
