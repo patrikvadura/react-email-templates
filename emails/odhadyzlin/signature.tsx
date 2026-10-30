@@ -130,12 +130,12 @@ const container = {
 const button = {
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-  boxSizing: 'border-box',
+  boxSizing: 'border-box' as const,
   padding: '12px 20px',
   fontSize: '14px',
   fontWeight: 600,
   borderRadius: 32,
-  textAlign: 'center',
+  textAlign: 'center' as const,
   backgroundColor: '#F0481C',
   color: '#ffffff',
 }

@@ -18,6 +18,9 @@ import * as React from 'react'
 import { Fragment } from 'react'
 import 'dotenv/config'
 
+/** Supported Saroli brand logo variants used in the signature template. */
+export type SaroliLogoVariant = 'saroli' | 'forte' | 'partners' | 'sport'
+
 export interface Props {
   userName?: string
   userImage?: string
@@ -26,7 +29,7 @@ export interface Props {
   userEmail?: string
   userPhone?: string
   userWebsite?: string
-  logo?: string
+  logo?: SaroliLogoVariant
 }
 
 const baseUrl = process.env.CDN_URL ? `${process.env.CDN_URL}` : ''
@@ -57,8 +60,9 @@ export const SaroliEmail = ({
     sport: 'https://sarolisport.cz',
   }
 
-  const logoVariant = logoVariants[logo] || logoVariants.saroli
-  const domain = domains[logo]
+  const logoKey: SaroliLogoVariant = logo ?? 'saroli'
+  const logoVariant = logoVariants[logoKey]
+  const domain = domains[logoKey]
 
   return (
     <Html>
